@@ -1,4 +1,4 @@
-# DesafioExplorer
+# Desafio Explorer
   O desafio tem o intuito de testar os conhecimentos apredidos durante o stage do Explorer, criando uma aplicação similiar ao pomodoro, onde fosse possível tocar alguma trilha sonora.
 
 <p align="center">
