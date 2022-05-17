@@ -1,5 +1,5 @@
 # Desafio Explorer
-  O desafio tem o intuito de testar os conhecimentos apredidos durante o stage do Explorer, criando uma aplicação similiar ao pomodoro, onde fosse possível tocar alguma trilha sonora.
+  O desafio tem o intuito de testar os conhecimentos apredidos durante o stage do Explorer, criando uma aplicação similiar ao pomodoro, onde fosse possível tocar alguma trilha sonora e adicionar Dark Mode.
 
 <p align="center">
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
