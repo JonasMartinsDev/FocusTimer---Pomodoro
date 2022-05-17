@@ -5,20 +5,30 @@
 }
 :root {
   --bg-card-color: #E5E5E5;
+  --background:#FFFFFF;
   --bg-card-color-active: #02799D;
-
   --text-color: #323238;
 
   font-size: 62.5%;
 }
 
+[data-theme="dark"] {
+  --bg-card-color: #29292E;
+  --bg-card-color-active: #0A3442;
+  --background:#121214;
+  --text-color: #C4C4CC;
+}
+
+
 body {
   color: var(--text-color);
+  background: var(--background);
 
   font-family: 'Roboto', sans-serif;
 }
 
 main {
+  position: relative;
   min-height: 100vh;
 
   display: flex;
@@ -61,21 +71,59 @@ button {
 
   cursor: pointer;
 
-  transition: all 0.3s;
+  transition: all 0.5s;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
 }
 
-.card:hover {
-  background: var(--bg-card-color-active);
+svg path {
+  fill: var(--text-color)
 }
 
 .active {
   background: var(--bg-card-color-active);
 }
 
-
 .active svg path {
   fill: #FFFFFF;
 }
 
+.active input[type=range] {
+  background-color: #FFFFFF;
+}
+.active .slider::-moz-range-thumb {
+  background: #FFFFFF;
+}
 
+.hide {
+  display: none;
+}
+
+#dark, #light {
+  position: absolute;
+  top: 6rem;
+  right: 6rem;
+}
+
+input[type=range] {
+  margin-top: 3.2rem;
+
+  appearance: none;
+  width: 9rem;
+  height: 0.4rem;
+  border-radius: 5px;
+  background-color: var(--text-color);
+  outline: none;
+}
+
+/* para o Fire Fox */
+.slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--text-color);
+  border: none;
+}

@@ -3,11 +3,12 @@ import {
   buttonStop,
   buttonIncrease,
   buttonDecrease,
-  cardFloresta,
-  cardCafeteira,
-  cardChuva,
-  cardLareira,
+  buttonForest,
+  buttonRain,
+  buttonCoffeeShop,
+  buttonFire,
 } from './element.js'
+
 
 export default function({sound, controls, timer}) {
 
@@ -29,42 +30,22 @@ export default function({sound, controls, timer}) {
     timer.removeTimer()
   })
   
-  cardFloresta.addEventListener('click', function() {
-    controls.removeClass(cardFloresta)
-  
-    sound.buttonFloresta.play()
-    sound.buttonChuva.pause()
-    sound.buttonLareira.pause()
-    sound.buttonCafeteria.pause()
-  
-  })
-  
-  cardChuva.addEventListener('click', function() {
-    controls.removeClass(cardChuva)
-    
-    sound.buttonChuva.play()
-    sound.buttonFloresta.pause()
-    sound.buttonLareira.pause()
-    sound.buttonCafeteria.pause()
-  
-  })
+ buttonForest.addEventListener('click', function() {
+   sound.pressForest()
+   controls.backColor(buttonForest)
+ }) 
+ buttonRain.addEventListener('click', function() {
+   sound.pressRain()
+   controls.backColor(buttonRain)
 
-  cardLareira.addEventListener('click', function() {
-    controls.removeClass(cardLareira)
-  
-    sound.buttonLareira.play()
-    sound.buttonFloresta.pause()
-    sound.buttonChuva.pause()
-    sound.buttonCafeteria.pause()  
-  })
+ }) 
+ buttonCoffeeShop.addEventListener('click', function() {
+   sound.pressCoffeeShop()
+   controls.backColor(buttonCoffeeShop)
 
-  cardCafeteira.addEventListener('click', function() {
-    controls.removeClass(cardCafeteira)
-  
-    sound.buttonCafeteria.play()
-    sound.buttonFloresta.pause()
-    sound.buttonChuva.pause()
-    sound.buttonLareira.pause()
-  
-  })
+ })
+ buttonFire.addEventListener('click', function() {
+   sound.pressFire()
+   controls.backColor(buttonFire)
+ }) 
 }
